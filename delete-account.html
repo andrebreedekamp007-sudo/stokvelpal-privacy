@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delete Your Account — StokvelPal</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #f9fafb;
+      color: #1a1a1a;
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      background: #00875A;
+      padding: 32px 24px;
+    }
+
+    header .wordmark {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    header .mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 800;
+      font-size: 20px;
+    }
+
+    header h1 {
+      color: #fff;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    header p {
+      color: rgba(255,255,255,0.75);
+      font-size: 13px;
+      margin-top: 4px;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-top: 40px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e8f5ef;
+    }
+
+    h2:first-of-type { margin-top: 0; }
+
+    p {
+      margin-bottom: 14px;
+      color: #374151;
+    }
+
+    ul {
+      margin: 8px 0 16px 20px;
+      color: #374151;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      padding-left: 4px;
+    }
+
+    .warning {
+      background: #fff8ed;
+      border-left: 4px solid #D97706;
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 24px 0;
+    }
+
+    .warning p {
+      margin: 0;
+      color: #92400e;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .steps {
+      counter-reset: steps;
+      list-style: none;
+      margin: 8px 0 16px 0;
+      padding: 0;
+    }
+
+    .steps li {
+      counter-increment: steps;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      padding-left: 0;
+    }
+
+    .steps li::before {
+      content: counter(steps);
+      min-width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #00875A;
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .steps li p {
+      margin: 0;
+    }
+
+    .contact-card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 16px;
+    }
+
+    .contact-card p {
+      margin: 0 0 6px;
+    }
+
+    .contact-card p:last-child { margin: 0; }
+
+    .email-link {
+      display: inline-block;
+      background: #00875A;
+      color: #fff;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 12px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      margin-top: 8px;
+    }
+
+    .email-link:hover { background: #005f3f; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 15px;
+    }
+
+    th {
+      background: #f1f5f9;
+      text-align: left;
+      padding: 10px 14px;
+      font-weight: 700;
+      color: #0f172a;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #e5e7eb;
+      color: #374151;
+      vertical-align: top;
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    .deleted { color: #DC2626; font-weight: 600; }
+    .kept { color: #D97706; font-weight: 600; }
+
+    a { color: #00875A; }
+
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 13px;
+      color: #9ca3af;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    @media (max-width: 600px) {
+      .container { padding: 32px 16px 60px; }
+      h2 { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="wordmark">
+    <div class="mark">S</div>
+    <div>
+      <h1>StokvelPal</h1>
+      <p>Account Deletion</p>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <h2>Delete your StokvelPal account</h2>
+
+  <p>You have the right to request deletion of your StokvelPal account and your personal data at any time. This page explains how to request deletion and what happens to your data afterwards.</p>
+
+  <div class="warning">
+    <p>⚠️ Account deletion is permanent and cannot be undone. Your group members will lose access to records associated with your account.</p>
+  </div>
+
+  <h2>How to request account deletion</h2>
+
+  <ul class="steps">
+    <li><p>Send an email to <strong>andre.breedekamp007@gmail.com</strong> with the subject line: <strong>StokvelPal Account Deletion Request</strong></p></li>
+    <li><p>Include the mobile phone number linked to your StokvelPal account so we can identify your account.</p></li>
+    <li><p>We will confirm receipt of your request within 5 business days and complete the deletion within 30 days.</p></li>
+    <li><p>You will receive a confirmation email once your account and data have been deleted.</p></li>
+  </ul>
+
+  <a class="email-link" href="mailto:andre.breedekamp007@gmail.com?subject=StokvelPal Account Deletion Request">
+    Email us to delete your account
+  </a>
+
+  <h2>What gets deleted and what gets kept</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Data type</th>
+        <th>What happens</th>
+        <th>Reason</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Your phone number</td>
+        <td class="deleted">Deleted</td>
+        <td>Removed from our authentication system</td>
+      </tr>
+      <tr>
+        <td>Your name and profile</td>
+        <td class="deleted">Deleted</td>
+        <td>Personal profile data is fully removed</td>
+      </tr>
+      <tr>
+        <td>Your disclaimer acceptance record</td>
+        <td class="deleted">Deleted</td>
+        <td>Legal acceptance record removed with account</td>
+      </tr>
+      <tr>
+        <td>Contribution records in group ledgers</td>
+        <td class="kept">Anonymised</td>
+        <td>Other group members have a legitimate interest in the financial history of their stokvel. Records are kept but your name and phone number are replaced with "Deleted Member".</td>
+      </tr>
+      <tr>
+        <td>Proof of payment photos you uploaded</td>
+        <td class="kept">Retained for 90 days then deleted</td>
+        <td>Other members may need to reference recent payment proofs. Deleted permanently after 90 days.</td>
+      </tr>
+      <tr>
+        <td>Audit log entries</td>
+        <td class="kept">Anonymised</td>
+        <td>Audit logs are immutable by design to protect group financial integrity. Your identity within them is anonymised.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>If you are a group treasurer</h2>
+
+  <p>If you are the treasurer of one or more stokvel groups, deleting your account will affect those groups. Before requesting deletion, we strongly recommend:</p>
+
+  <ul>
+    <li>Transferring the treasurer role to another member</li>
+    <li>Downloading or sharing final statements with your group members</li>
+    <li>Notifying your group that you are closing your account</li>
+  </ul>
+
+  <p>If you delete your account without transferring the treasurer role, the group will be archived and members will lose access to the group dashboard.</p>
+
+  <h2>Contact us</h2>
+
+  <div class="contact-card">
+    <p><strong>Matchpad Technologies (Pty) Ltd</strong></p>
+    <p>Vanderbijlpark, Gauteng, South Africa</p>
+    <p>Registration number: 2026/344948/07</p>
+    <p>Email: <a href="mailto:andre.breedekamp007@gmail.com">andre.breedekamp007@gmail.com</a></p>
+    <p>Response time: within 5 business days</p>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2026 Matchpad Technologies (Pty) Ltd &nbsp;·&nbsp; StokvelPal &nbsp;·&nbsp; Registration 2026/344948/07
+</footer>
+
+</body>
+</html>
